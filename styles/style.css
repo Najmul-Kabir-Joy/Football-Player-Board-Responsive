@@ -1,5 +1,9 @@
+/* IMPORTING GOOGLE FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
+/*------------------------------------
+    DECLARING SOME COLOR VARIABLES 
+ ------------------------------------*/
 :root{
     --bg-color: #2D25A0;
     --text-color-one: #FFFFFF;
@@ -8,6 +12,10 @@
     --text-color-light: #6C6C6C;
     --button-color: #E02C6D;
 }
+
+/*------------------------------------
+            GLOBAL STYLES
+ ------------------------------------*/
 
 *{
     margin: 0;
@@ -27,6 +35,17 @@ section{
     margin-top: 70px;
 }
 
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;   
+}
+
+/*------------------------------------
+            HEADER STYLES 
+ ------------------------------------*/
 .top-header{
     max-width: 100%;
     height: 100%;
@@ -83,7 +102,9 @@ section{
     margin-left: 8px;
 }
 
-
+/*------------------------------------
+        STYLES FOR PLAYER CARDS 
+ ------------------------------------*/
 
 .player-cards-container{
     display: flex;
@@ -127,7 +148,9 @@ section{
     padding: 5px;
     font-size: 16px;
 }
-
+/*------------------------------------
+        STYLES FOR MATCHES 
+ ------------------------------------*/
 .matches{
     display: flex;
     justify-content: center;
@@ -158,46 +181,9 @@ section{
 .watch-live{
     margin-top: 34px;
 }
-
-footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;   
-
-}
-
-footer div{
-    margin-bottom: 20px;
-}
-
-footer div p{
-    font-size: 18px;
-    font-weight: 400;
-    color: var(--text-color-dark);
-}
-
-.footer-img img{
-    width: 484px;
-    height: 110px;
-    margin: auto;
-}
-
-.fab{
-    background-color: #969bab46;
-    border-radius: 50%;
-    padding: 9.6px 8.5px;
-    color: #969BAB;
-    margin-right: 14px;
-    font-size: 12px;
-}
-
-.fab:hover{
-    background-color: var(--bg-color);
-    color: white;
-}
-
+/*------------------------------------
+        STYLES FOR BONUS PARTS 
+ ------------------------------------*/
 .blogs-heading{
     text-align: center;
     margin-bottom: 3%;
@@ -257,6 +243,7 @@ footer div p{
     animation: slide 3s ease-in-out 0.3s infinite alternate-reverse;
     animation-play-state: running;         
 }
+/* ANIMATION */
 @keyframes slide {
     0%{
         left: 0;
@@ -279,81 +266,43 @@ footer div p{
 
     }
 }
-
-
-@media only screen and (min-width: 768px) and (max-width:1024px){
-    *{
-        overflow-x: hidden;
-        margin: 1%;
-    }
-
-    .player-cards{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        column-gap: 30px;
-        row-gap: 27px;
-    }
-    .player-card{
-        overflow: hidden;
-    }
-
-    .match-img img{
-        width: 400px;
-        height: 327px;
-    }
-    .banner-heading{
-        font-size: 40px;
-        font-weight: bold;
-        color: var(--text-color-one);
-        margin-bottom: 7px;
-    }
-    .fa-arrow-right{
-        display: inline;
-    }
-    .news-teller{
-        width: 100%;
-        padding: 50px;
-        margin: auto;
-        position: relative;
-    }
-    @keyframes slide {
-        0%{
-            left: 0;
-            top:0;
-            
-        }
-        25%{
-            top: 0;
-        }
-        50%{
-            top: 160px;
-        }
-        75%{
-            top: 0;
-        }
-        100%{
-            left: 80%;
-            top: 0;
-    
-        }
-    }
-    .social-icons{
-        margin: 0;
-        text-align: center;
-        display: flex;
-    }
-
-    footer div p{
-        margin: 0;
-    }
-
-    .match-about h1{
-        font-size: 38px;
-        font-weight: bold;
-    }
+/*------------------------------------
+        STYLES FOR FOOTER 
+ ------------------------------------*/
+footer div{
+    margin-bottom: 20px;
 }
 
-@media only screen and (max-width:688px){
+footer div p{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-color-dark);
+}
+
+.footer-img img{
+    width: 484px;
+    height: 110px;
+    margin: auto;
+}
+
+.fab{
+    background-color: #969bab46;
+    border-radius: 50%;
+    padding: 9.6px 8.5px;
+    color: #969BAB;
+    margin-right: 14px;
+    font-size: 12px;
+}
+
+.fab:hover{
+    background-color: var(--bg-color);
+    color: white;
+}
+/*------------------------------------
+        RESPONSIVE FOR MOBILES 
+ ------------------------------------*/
+
+@media only screen and (max-width:687px){
     *{
         overflow-x: hidden;
     }
@@ -486,3 +435,84 @@ footer div p{
     }
 
 }
+
+/*-----------------------------------------------
+    RESPONSIVE FOR LOW END LAPTOPS AND TABLETS
+ ------------------------------------------------*/
+
+@media only screen and (min-width: 768px) and (max-width:1024px){
+    *{
+        overflow-x: hidden;
+        margin: 1%;
+    }
+
+    .top-navigation{
+        display: none;
+    }
+
+    .player-cards{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 30px;
+        row-gap: 27px;
+    }
+    .player-card{
+        overflow: hidden;
+    }
+
+    .match-img img{
+        width: 400px;
+        height: 327px;
+    }
+    .banner-heading{
+        font-size: 40px;
+        font-weight: bold;
+        color: var(--text-color-one);
+        margin-bottom: 7px;
+    }
+    .fa-arrow-right{
+        display: inline;
+    }
+    .news-teller{
+        width: 100%;
+        padding: 50px;
+        margin: auto;
+        position: relative;
+    }
+    @keyframes slide {
+        0%{
+            left: 0;
+            top:0;
+            
+        }
+        25%{
+            top: 0;
+        }
+        50%{
+            top: 160px;
+        }
+        75%{
+            top: 0;
+        }
+        100%{
+            left: 80%;
+            top: 0;
+    
+        }
+    }
+    .social-icons{
+        margin: 0;
+        text-align: center;
+        display: flex;
+    }
+
+    footer div p{
+        margin: 0;
+    }
+
+    .match-about h1{
+        font-size: 38px;
+        font-weight: bold;
+    }
+}
+
