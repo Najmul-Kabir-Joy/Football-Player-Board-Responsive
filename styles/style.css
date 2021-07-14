@@ -65,7 +65,7 @@ section{
 }
 
 .top-banner img{
-    margin-top: 135px;
+    margin-top: 80px;
     width: 560px;
     height: 438px;
     margin-bottom: 47px;
@@ -268,6 +268,7 @@ footer div p{
     }
     50%{
         top: 50%;
+        transform: scale(0.8);
     }
     75%{
         top: 0;
@@ -285,6 +286,7 @@ footer div p{
         overflow-x: hidden;
         margin: 1%;
     }
+
     .player-cards{
         display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -354,6 +356,10 @@ footer div p{
 @media only screen and (max-width:688px){
     *{
         overflow-x: hidden;
+    }
+
+    .top-navigation{
+        display: none;
     }
     .top-banner{
         flex-direction: column;
