@@ -19,6 +19,10 @@ p{
     font-size: 16px;
 }
 
+h2{
+    color: var(--text-color-two);
+}
+
 section{
     margin-top: 70px;
 }
@@ -78,6 +82,8 @@ section{
 .fa-arrow-right{
     margin-left: 8px;
 }
+
+
 
 .player-cards-container{
     display: flex;
@@ -261,7 +267,7 @@ footer div p{
         top: 0;
     }
     50%{
-        top: 200px;
+        top: 50%;
     }
     75%{
         top: 0;
